@@ -1,21 +1,28 @@
-<?php
-$nama= "Muhammad Daffa";
-$jurusan= "Tenik Informatika";
-$semester= 2;
-$sudahlulus = false;
+<?php 
+
+	$nama = "Muhammad Daffa";
+	$jurusan = "Teknik Informatika";
+	$semester = 2;
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
 <body>
-    <p><?php echo $nama ?></p>
-    <p><?php echo $jurusan ?></p>
-    <p><?php echo $semester ?></p>
-    <p><?php echo $sudahlulus ?></p>
+	<h2><?php echo $nama ?></h2>
+	<p>
+		Hai nama saya <?php echo $nama ?>
+	</p>
+	<p>
+		Saya kuliah di jurusan <?php echo $jurusan ?>
+	</p>
+	<p>
+		Saat ini saya berada di semester <?php echo $semester ?>
+	</p>
 </body>
 </html>

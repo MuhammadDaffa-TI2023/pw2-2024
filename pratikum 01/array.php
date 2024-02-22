@@ -6,6 +6,6 @@ foreach ($animals as $key => $value){
     echo $value . "<br>";
 }
 
-$animals[2] = "musang";
+$animals [2] = "musang";
 echo $animals[2];
 ?>

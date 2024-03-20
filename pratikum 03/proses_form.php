@@ -1,11 +1,12 @@
 <?php
-$nim = $_POST ["nim"];
-$nama = $_POST ["nama"];
-$jenis_kelamin = $_POST ["jenis_kelamin"];
-$prodi = $_POST ["prodi"];
-$keahlian = $_POST ["keahlian"];
-$domisili = $_POST ["domisili"];
-$email = $_POST ["email"];
+$nim = $_POST["nim"];
+$nama = $_POST["nama"];
+$jenis_kelamin = $_POST["jenis_kelamin"];
+$prodi = $_POST["prodi"];
+$keahlian = $_POST["keahlian"];
+$domisili = $_POST["domisili"];
+$email = $_POST["email"];
+
 ?>
 <h1>Terima kasih telah mendaftar Di IT CLUB DATA SCIENCE</h1>
 <h4>Nama Lengkap: <?php echo $nim ?></h4>

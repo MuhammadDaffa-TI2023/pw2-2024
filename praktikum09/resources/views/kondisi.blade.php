@@ -7,7 +7,7 @@
 </head>
 <body>
     @php 
-    $nama = 'Muhammad Yanwar';
+    $nama = 'Muhammad Daffa';
     echo $nama
     @endphp
 </body>

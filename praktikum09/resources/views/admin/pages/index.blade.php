@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            Nama - NIM
+                            Muhammad Daffa-0110223084
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">

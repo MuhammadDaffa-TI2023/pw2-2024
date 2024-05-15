@@ -14,7 +14,7 @@
                 <img src="dist/img/1.JPG" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Muhammad Yanwar</a>
+                <a href="#" class="d-block">Muhammad Daffa</a>
             </div>
         </div>
 

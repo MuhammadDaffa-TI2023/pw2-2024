@@ -7,7 +7,7 @@
 </head>
 <body>
     @php
-        $nama = 'Yanwar';
+        $nama = 'Daffa';
         $nilai = 95.99;
     @endphp
     @if ($nilai >= 60)

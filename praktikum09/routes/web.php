@@ -20,3 +20,5 @@ Route::get('/pasien', function () {
 });
 
 Route::get('/admin',[AdminController::class, 'index']);
+//pasien
+Route::get('/admin/pasien',[PasienController::class, 'index']);

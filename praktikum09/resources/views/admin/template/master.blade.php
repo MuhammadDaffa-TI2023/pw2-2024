@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project 01</title>
+    <title>Project 1</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -21,14 +21,12 @@
     <div class="wrapper">
         @include('admin.partials.header')
 
-        @include('admin.partials.sidebar')
+        @include('admin.partialls.sidebar')
 
         @yield('content')
-        
-        @include('admin.partials.footer')
 
-        <!-- Navbar -->
-        <!-- Control Sidebar -->
+        @include('admin.partials.footer')
+    <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
 </aside>

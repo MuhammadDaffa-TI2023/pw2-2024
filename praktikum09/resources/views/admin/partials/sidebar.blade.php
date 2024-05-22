@@ -11,10 +11,10 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="dist/img/1.JPG" class="img-circle elevation-2" alt="User Image">
+                <img src="dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Muhammad Daffa</a>
+                <a href="#" class="d-block">Mufadhal</a>
             </div>
         </div>
 
@@ -45,39 +45,39 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pasien" class="nav-link">
+                            <a href="../pasien" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Table Pasien</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="dokter" class="nav-link">
+                            <a href="../dokter" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Table Dokter</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="periksa" class="nav-link">
+                            <a href="../periksa" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Table Periksa</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="kelurahan" class="nav-link">
+                            <a href="../kelurahan" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Table Kelurahan</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="unit_kerja" class="nav-link">
+                            <a href="../unit kerja" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Table Unit Kerja</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="users" class="nav-link">
+                            <a href="../users" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Table User</p>
+                                <p>Table Users</p>
                             </a>
                         </li>
                     </ul>

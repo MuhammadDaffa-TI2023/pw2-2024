@@ -19,7 +19,7 @@ class PasienSeeder extends Seeder
         pasien::insert ([
             [
                 'kode' => 'P001',
-                'nama' => 'Budi Santoso',
+                'nama' => 'Daffa Santoso',
                 'tmp_lahir' => 'Jakarta',
                 'tgl_lahir' => '1990-01-01',
                 'gender' => 'L',

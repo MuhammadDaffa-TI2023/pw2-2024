@@ -38,8 +38,8 @@
                         </button>
                     </div>
                 </div>
-                <div class="card-body">
-                    <h1 class="my-4">Daftar Pasien</h1>
+                <h1 class="my-4">Daftar Pasien</h1>
+                    <a href="{{ route('pasiens.create') }}" class="btn btn-primary">Tambah Pasien</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -51,19 +51,33 @@
                                 <th>Gender</th>
                                 <th>Email</th>
                                 <th>Alamat</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pasien as $pasien)
+                            @foreach ($pasien as $pasiens)
                                 <tr>
-                                    <td>{{ $pasien->id }}</td>
-                                    <td>{{ $pasien->kode }}</td>
-                                    <td>{{ $pasien->nama }}</td>
-                                    <td>{{ $pasien->tmp_lahir }}</td>
-                                    <td>{{ $pasien->tgl_lahir }}</td>
-                                    <td>{{ $pasien->gender }}</td>
-                                    <td>{{ $pasien->email }}</td>
-                                    <td>{{ $pasien->alamat }}</td>
+                                    <td>{{ $pasiens->id }}</td>
+                                    <td>{{ $pasiens->kode }}</td>
+                                    <td>{{ $pasiens->nama }}</td>
+                                    <td>{{ $pasiens->tmp_lahir }}</td>
+                                    <td>{{ $pasiens->tgl_lahir }}</td>
+                                    <td>{{ $pasiens->gender }}</td>
+                                    <td>{{ $pasiens->email }}</td>
+                                    <td>{{ $pasiens->alamat }}</td>
+                                    <td>
+                                    
+                                    <td>
+    <a href="{{ route('pasiens.show', $pasiens->id) }}" class="btn btn-info btn-sm">Read</a>
+    
+    <a href="{{ route('pasiens.edit', $pasiens->id) }}" class="btn btn-warning btn-sm">Update</a>
+    <form action="{{ route('pasiens.destroy', $pasiens->id) }}" method="POST" style="display: inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this pasien?')">Delete</button>
+    </form>
+</td>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

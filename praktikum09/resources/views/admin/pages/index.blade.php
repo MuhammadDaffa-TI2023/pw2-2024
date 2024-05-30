@@ -1,6 +1,7 @@
-@extends('admin.template.master')
+@include('admin.partials.header')
+@include('admin.partials.sidebar')
 
-@section('content')
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -51,4 +52,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-@endsection
+    @include('admin.partials.footer')

@@ -1,5 +1,5 @@
-@include('pasien.header')
-@include('pasien.sidebar')
+@include('kelurahan.header')
+@include('kelurahan.sidebar')
 
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
@@ -39,37 +39,27 @@
                     </div>
                 </div>
                 <div class="card-body">
-                <h1 class="my-4">Daftar Pasien</h1>
-                    <a href="{{ route('pasiens.create') }}" class="btn btn-primary">Tambah Pasien</a>
+                <h1 class="my-4">Daftar Kelurahan</h1>
+                    <a href="{{ route('kelurahans.create') }}" class="btn btn-primary">Tambah Kelurahan</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Kode</th>
                                 <th>Nama</th>
-                                <th>Tempat Lahir</th>
-                                <th>Tanggal Lahir</th>
-                                <th>Gender</th>
-                                <th>Email</th>
-                                <th>Alamat</th>
+                                <th>Kecamatan ID</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($list_pasien as $pasien)
+                            @foreach ($kelurahan as $kelurahan)
                                 <tr>
-                                    <td>{{ $pasien->id }}</td>
-                                    <td>{{ $pasien->kode }}</td>
-                                    <td>{{ $pasien->nama }}</td>
-                                    <td>{{ $pasien->tmp_lahir }}</td>
-                                    <td>{{ $pasien->tgl_lahir }}</td>
-                                    <td>{{ $pasien->gender }}</td>
-                                    <td>{{ $pasien->email }}</td>
-                                    <td>{{ $pasien->alamat }}</td>
+                                    <td>{{ $kelurahan->id }}</td>
+                                    <td>{{ $kelurahan->nama }}</td>
+                                    <td>{{ $kelurahan->kecamatan_id }}</td>
                                     <td>
-                                        <a href="{{ route('pasiens.show', $pasien->id) }}" class="btn btn-info btn-sm">Read</a>
-                                        <a href="{{ route('pasiens.edit', $pasien->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                        <form action="{{ route('pasiens.destroy', $pasien->id) }}" method="POST" style="display: inline;">
+                                        <a href="{{ route('kelurahans.show', $kelurahan->id) }}" class="btn btn-info btn-sm">Read</a>
+                                        <a href="{{ route('kelurahans.edit', $kelurahan->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <form action="{{ route('kelurahans.destroy', $kelurahan->id) }}" method="POST" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin nih mau hapus?')">Delete</button>
@@ -93,5 +83,4 @@
     </div>
     <!-- /.content-wrapper -->
 </div>
-
-@include('pasien.footer')
+@include('kelurahan.footer')

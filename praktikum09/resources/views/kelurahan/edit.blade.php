@@ -1,5 +1,5 @@
-@include('pasien.header')
-@include('pasien.sidebar')
+@include('kelurahan.header')
+@include('kelurahan.sidebar')
 
 <div class="container-fluid px-4">
     <!-- Content Wrapper. Contains page content -->
@@ -9,12 +9,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Detail Pasien</h1>
+                        <h1>Edit Kelurahan</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Detail Pasien</li>
+                            <li class="breadcrumb-item active">Edit Kelurahan</li>
                         </ol>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Detail Pasien</h3>
+                    <h3 class="card-title">Edit Kelurahan</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -39,35 +39,23 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="kode">Kode:</label>
-                        <p>{{ $pasien->kode }}</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="nama">Nama:</label>
-                        <p>{{ $pasien->nama }}</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="tmp_lahir">Tempat Lahir:</label>
-                        <p>{{ $pasien->tmp_lahir }}</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="tgl_lahir">Tanggal Lahir:</label>
-                        <p>{{ $pasien->tgl_lahir }}</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender:</label>
-                        <p>{{ $pasien->gender }}</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <p>{{ $pasien->email }}</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="alamat">Alamat:</label>
-                        <p>{{ $pasien->alamat }}</p>
-                    </div>
-                    <a href="{{ route('pasiens.index') }}" class="btn btn-primary">Back</a>
+                    <form action="{{ route('kelurahans.update', $kelurahan->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+
+                        <div class="form-group">
+                            <label for="kode">Kecamatan ID:</label>
+                            <input type="number" name="kecamatan_id" value="{{ $kelurahan->kecamatan_id }}" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nama">Nama:</label>
+                            <input type="text" name="nama" value="{{ $kelurahan->nama }}" class="form-control">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
@@ -82,4 +70,4 @@
     </div>
     <!-- /.content-wrapper -->
 </div>
-@include('pasien.footer')
+<@include('kelurahan.footer')

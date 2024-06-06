@@ -12,8 +12,8 @@ class PasienController extends Controller
      */
     public function index()
     {
-        $pasien = Pasien::get();
-        return view('pasien.index', compact('pasien'));
+        $list_pasien = Pasien::all();
+        return view('pasien.index', compact('list_pasien'));
     }
 
     /**
@@ -29,28 +29,28 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        // cek validasi
+        //cek validasi
         $request->validate([
-                'kode' => 'required|string',
-                'nama' => 'required|string',
-                'tmp_lahir' => 'required|string',
-                'tgl_lahir' => 'required|date',
-                'gender' => 'required|string',
-                'email' => 'required|string',
-                'alamat' => 'required|string',
-            ]);
-            // kirim ke database
-            Pasien::create([
-                'kode' => $request->kode,
-                'nama' => $request->nama,
-                'tmp_lahir' => $request->tmp_lahir,
-                'tgl_lahir' => $request->tgl_lahir,
-                'gender' => $request->gender,
-                'email' => $request->email,
-                'alamat' => $request->alamat,
-            ]);
-            // direct ke index
-            return redirect()->route('pasien.index');
+            'kode' => 'required|string',
+            'nama' => 'required|string',
+            'tmp_lahir' => 'required|string',
+            'tgl_lahir' => 'required|date',
+            'gender' => 'required|string',
+            'email' => 'required|string',
+            'alamat' => 'required|string',
+        ]);
+        // kirim data ke database
+        Pasien::create([
+            'kode' => $request->kode,
+            'nama' => $request->nama,
+            'tmp_lahir' => $request->tmp_lahir,
+            'tgl_lahir' => $request->tgl_lahir,
+            'gender' => $request->gender,
+            'email' => $request->email,
+            'alamat' => $request->alamat,
+        ]);
+        // redirect ke index
+        return redirect()->route('pasiens.index')->with('success', 'Pasien created successfully.');
     }
 
     /**
@@ -58,6 +58,7 @@ class PasienController extends Controller
      */
     public function show(Pasien $pasien)
     {
+        //
         return view('pasien.show', compact('pasien'));
     }
 
@@ -66,13 +67,9 @@ class PasienController extends Controller
      */
     public function edit(Pasien $pasien)
     {
+        //
         return view('pasien.edit', compact('pasien'));
     }
-
-
-    /**
-     * Update the specified resource in storage.
-     */
 
     /**
      * Update the specified resource in storage.
@@ -83,8 +80,7 @@ class PasienController extends Controller
         $pasien->update($request->all());
 
         // Redirect to the index page with a success message
-        return redirect()->route('pasien.index')->with('success', 'Pasien updated successfully');
-    
+        return redirect()->route('pasiens.index')->with('success', 'Pasien updated successfully');
     }
 
     /**
@@ -92,10 +88,11 @@ class PasienController extends Controller
      */
     public function destroy(Pasien $pasien)
     {
-         // Delete the Pasien instance
-         $pasien->delete();
+        //
+        // Delete the Pasien instance
+        $pasien->delete();
 
-         // Redirect back to the index page with a success message
-         return redirect()->route('pasiens.index')->with('success', 'Pasien deleted successfully');
+        // Redirect back to the index page with a success message
+        return redirect()->route('pasiens.index')->with('success', 'Pasien deleted successfully');
     }
 }
